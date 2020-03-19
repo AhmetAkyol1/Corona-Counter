@@ -6,13 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="search"
+        android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warning"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="288dp"
+        android:layout_height="298dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText">
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="Country: "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/cases"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="Cases:"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/todayCases"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="TodayCases:"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/todayDeaths"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="TodayDeaths:"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/deaths"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="Deaths:"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/recovered"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="Recovered:"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/active"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="Active:"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/critical"
+            android:layout_width="267dp"
+            android:layout_height="37dp"
+            android:text="Critical: "
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Country Search"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="303dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:gravity="center"
+        android:textColor="#A23333"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
